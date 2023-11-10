@@ -1,7 +1,7 @@
-import { raw } from "objection";
 import poolRedis from "../../config/redis";
 import { Car, CarEntity } from "../models/entity/car";
 import { CarRequest } from "../models/dto/car";
+import { raw } from "objection";
 
 class CarsRepository {
   static async getCars(): Promise<Car[]> {

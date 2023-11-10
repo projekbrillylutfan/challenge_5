@@ -52,7 +52,6 @@ class CarsHandler {
         const uploadedImage = await cloudinary.uploader.upload(file);
     
         payload.car_img = uploadedImage.secure_url;
-        // Payload validation
         if (
           !(
             payload.car_name &&
@@ -89,7 +88,6 @@ class CarsHandler {
         const queryId: number = parseInt(req.params.id);
         const payload: CarRequest = req.body;
         payload.car_img = (req as any)["uploaded_car_img"];
-        // Payload validation
         if (
           !(
             payload.car_name &&
